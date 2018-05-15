@@ -3,6 +3,7 @@
 Created on Fri May  4 09:00:41 2018
 
 @author: linpeijie
+@该算法是书本上的2.1习题复现，属于感知机的原始模型
 """
 from numpy import *
 import numpy as np
