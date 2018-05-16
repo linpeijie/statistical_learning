@@ -22,7 +22,6 @@ def dataSet():
     y = [1,1,-1]
     return T,y
 
-
 def calMinL(x,y):
     """
     :计算损失函数的最小值
