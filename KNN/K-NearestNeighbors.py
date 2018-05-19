@@ -51,17 +51,18 @@ def view(x_train, y_train, x_test):
     plt.scatter(x_test[0], x_test[1], color = 'b')
     plt.show()
     
-def KNN(x_train, y_train, x_test):
+def KNN(k, x_train, y_train, x_test):
     """
     :计算欧拉距离，两点间的距离
     """
     distances = [sqrt(np.sum(x_train - x_test)**2) for x_train in x_train]
     nearest = np.argsort(distances) #返回排序后的索引,list形式
-    k = 6
     topK_y = [y_train[i] for i in nearest[:k]] #找出最近的K的点的标签y
     votes = Counter(topK_y) #计算数组topK_y中各元素出现的次数,找出票数最多的元素
     predict_y = votes.most_common(1)[0][0] #找出票数最多的元素,返回元组里的元素
-    print("预测结果为：{}".format(predict_y))
+    
+    return predict_y
+    
 
 if __name__ == '__main__':
     """
@@ -70,4 +71,5 @@ if __name__ == '__main__':
     x_train, y_train = train_data_set()
     x_test = test_data_set()
     view(x_train, y_train, x_test)
-    KNN(x_train, y_train, x_test)
+    
+    print("预测结果为：{}".format(KNN(6, x_train, y_train, x_test)))
