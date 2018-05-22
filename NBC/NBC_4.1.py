@@ -8,7 +8,6 @@ Created on Mon May 21 15:35:53 2018
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from math import sqrt
 from collections import Counter
 
 def train_data_set():
