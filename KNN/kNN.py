@@ -38,8 +38,13 @@ class KNNClassifier:
         :param x_predict: array
         :return: array
         """
+        # 将x_predict化为向量
+        if len(x_predict.shape) == 1:
+            x_predict = np.array([x_predict])
+
         assert self._x_train is not None and self._y_train is not None,\
             'must fit before predict!'
+        # x_predict的列数必须等于x_train的列数，即特征数
         assert x_predict.shape[1] == self._x_train.shape[1],\
             'the feature number of x_predict must be equal to x_train'
 
