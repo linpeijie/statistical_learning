@@ -30,8 +30,8 @@ def precess_data(data):
     :从数据集中分类出输入空间和输出空间
     :rtype: array
     """
-    x = data[:,0:4]
-    y = data[:,4]
+    x = data[:, 0:4]
+    y = data[:, 4]
     
     return x, y
 
