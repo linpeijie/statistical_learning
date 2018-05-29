@@ -3,18 +3,19 @@
 import numpy as np
 from math import sqrt
 from collections import Counter
+from metric import accuracy_score
 
 
 class KNNClassifier:
     """
     """
-    def __init__(self, k):
+    def __init__(self, n_neighbors):
         """
         初始化kNN分类器
         :param k: 参数
         """
-        assert k >= 1, "k must be valid"
-        self.k = k
+        assert n_neighbors >= 1, "k must be valid"
+        self.k = n_neighbors
         self._x_train = None
         self._y_train = None
 
@@ -66,6 +67,15 @@ class KNNClassifier:
         votes = Counter(top_k_y)
 
         return votes.most_common(1)[0][0]
+
+    def score(self, x_test, y_test):
+        """确定当前模型的准确度
+        :param x_test:
+        :param y_test:
+        :return:
+        """
+        y_predict = self.predict(x_test)
+        return accuracy_score(y_test, y_predict)
 
     def __repr__(self):
         """
