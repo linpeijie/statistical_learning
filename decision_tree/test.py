@@ -19,4 +19,5 @@ if __name__ == '__main__':
 
     my_dt = DecisionTreeID3()
     my_dt.entropy(x, y)
+    my_dt.entropy_ratio(x, y)
     
