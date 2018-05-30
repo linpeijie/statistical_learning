@@ -12,7 +12,7 @@ class KNNClassifier:
     def __init__(self, n_neighbors):
         """
         初始化kNN分类器
-        :param k: 参数
+        :param n_neighbors: 参数
         """
         assert n_neighbors >= 1, "k must be valid"
         self.k = n_neighbors
