@@ -23,8 +23,7 @@ class DecisionTreeID3:
         :return:
         """
         # （1）若D中所有实例属于同一类C，将此类C作为节点的类标记，返回T，即创建 叶子节点
-        if self.empirical_entropy(y) == 0:
-            print(y)
+        if self.empirical_entropy(y) == 0 and y != []:
             return y[0]
         # （2）若特征A为空集，则将剩下的所有无法再继续分类的样本点划分到含有最多样本点的类C中，创建 叶子节点
         if len(x[0]) == 1:
@@ -40,8 +39,10 @@ class DecisionTreeID3:
         # (5)分割特征空间，(6)递归的调用树，直到所有情况都确定为止
         feature = x[:, best_feature]
         for value in np.unique(feature):
-            x, y = self.split_feature(x, y, best_feature, value)
-            tree[best_feature][value] = self.create_tree(x, y)
+            x_split, y_split = self.split_feature(x, y, best_feature, value)
+            if x != [] and y != []:
+                tree[best_feature][value] = self.create_tree(x_split, y_split)
+        print(tree)
         return tree
 
     def max_label(self):
@@ -130,9 +131,9 @@ class DecisionTreeID3:
         :param value:
         :return:
         """
-        assert  x is not None and y is not None, 'x is None, y is None'
+        assert x is not None and y is not None, 'x is None, y is None'
         # 取出符合条件的样本点
-        feature = x[x[:, index] == value,:]
+        feature = x[x[:, index] == value, :]
         y = y[x[:, index] == value]
         return feature, y
 
