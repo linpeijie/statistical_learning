@@ -31,10 +31,10 @@ class LogisticRegression:
 
         def cost(theta, x_b, y):
             """求解损失函数，这里使用的是对数似然函数
-            :param theta:
-            :param x_b:
-            :param y:
-            :return:
+            :param theta: 求出来的参数
+            :param x_b: 实例
+            :param y: 类别
+            :return: L(w)的值
             """
             y_hat = self._sigmoid(np.array(x_b.dot(theta), dtype=np.float32))
             try:
@@ -43,7 +43,7 @@ class LogisticRegression:
                 return float('inf')
 
         def dcost(theta, x_b, y):
-            """求梯度
+            """求梯度函数
             :param theta:
             :param x_b:
             :param y:
@@ -52,7 +52,9 @@ class LogisticRegression:
             return x_b.T.dot(self._sigmoid(np.array(x_b.dot(theta), dtype=np.float32)) - y) / len(x_b)
 
         def gradient_descent(x_b, y, initial_theta, eta, n_iters=1e4, epsilon=1e-8):
-            """应用梯度下降法求解最小值，极大值"""
+            """应用梯度下降法求解最小值
+            : n_iters: 循环次数，即要计算几个点
+            """
             theta = initial_theta
             cur_iter = 0
 
@@ -65,8 +67,8 @@ class LogisticRegression:
                 cur_iter += 1
             return theta
 
-        x_b = np.hstack([np.ones((len(x_train), 1)), x_train])
-        initial_theta = np.zeros(x_b.shape[1])
+        x_b = np.hstack([np.ones((len(x_train), 1)), x_train])  # 特征向量，1是b的内积向量
+        initial_theta = np.zeros(x_b.shape[1])  # 参数向量的大小
         self._theta = gradient_descent(x_b, y_train, initial_theta, eta, n_iters)  # 模型的参数
 
         self.intercept_ = self._theta[0]  # 即 bias 偏置
