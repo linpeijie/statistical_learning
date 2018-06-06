@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from model_selection import train_test_split
 from logistic_regression import LogisticRegression
+from linear_regression import LinearRegression
 
 
 if __name__ == '__main__':
@@ -16,9 +17,9 @@ if __name__ == '__main__':
     y_data[y_data == 'Iris-versicolor'] = 1
 
     x_train, y_train, x_test, y_test = train_test_split(x_data, y_data)
+
     plt.scatter(x_train[y_train == 0, 0], x_train[y_train == 0, 1], color='red')
     plt.scatter(x_train[y_train == 1, 0], x_train[y_train == 1, 1], color='blue')
-    plt.show()
 
     log_reg = LogisticRegression()
     log_reg.fit(x_train, y_train)
@@ -26,5 +27,9 @@ if __name__ == '__main__':
     print(y_test)
     print(log_reg.predict(x_test))
     print(log_reg.predict_proba(x_test))
+
+
+
+
 
 
