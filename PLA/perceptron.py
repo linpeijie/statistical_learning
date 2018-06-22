@@ -5,72 +5,52 @@ Created on Fri May  4 09:00:41 2018
 @author: linpeijie
 @该算法是书本上的2.1习题复现，属于感知机的原始模型
 """
-from numpy import *
 import numpy as np
+from metric import accuracy_score
 
-#初始化w，b
-w = [0,0]
-b = 0
 
-def dataSet():
-    """
-    :数据集
-    :rtype: array
-    :rtype: List
-    """
-    T = array([[3,3],[4,3],[1,1]])
-    y = [1,1,-1]
-    return T,y
+class Perceptron:
+    def __init__(self):
+        """初始化"""
+        self._w = [0, 0]
+        self._b = 0
+        self._n = 1
 
-def calMinL(x,y):
-    """
-    :计算损失函数的最小值
-    :type x: List
-    :type y: Int
-    """
-    global w,b
-    return y * (np.dot(x,w) + b) #计算内积
+    def fit(self, X_train, y_train):
+        """训练模型"""
+        assert X_train.shape[0] == len(y_train), 'The size of X_train must be equal to the size of y_train'
+        assert X_train.shape[1] == 2, 'the feature of X_train must be equal to 2'
 
-def update(x,y):
-    """
-    :更新w，b
-    :type x: List
-    :type y: Int
-    """
-    global w,b
-    for i in range(len(x)):
-        w[i] += y * x[i]
-    b += y
+        find_min = False
+        sample_num = len(y_train)
+
+        while(not find_min):
+            for i in range(sample_num):
+                if y_train[i] * (np.dot(self._w, X_train[i])) <= 0:
+                    self._w = self._w + self._n * y_train[i] * X_train[i]
+                    self._b = self._b + self._n * y_train[i]
+                    find_min = False
+                    break
+                elif i == sample_num - 1:
+                    find_min = True
     
+    def predict(self, x_test):
+        """预测"""
+        result = [self._predict(x) for x in x_test]
+        
+        return result
+    
+    def _predict(self, x):
+        """预测样本类别"""
+        if np.dot(self._w, x) + self._b >= 0:
+            return 1
+        else:
+            return -1
+    
+    def score(self, x_test, y_test):
+        """算法准确率"""
+        y_predict = self.predict(x_test)
+        y_predict = np.array(y_predict)
 
-def perceptron(T,y):
-    """
-    :感知机算法
-    :type T: array
-    :type y: List
-    """
-    global w,b
-    iteration = 0 #迭代次数
-    findMinL = False #判断是否找到损失函数的最小值
-    sampleNumber = T.shape[0] #样本点个数
-    
-    while(not findMinL):
-        for i in range(sampleNumber):
-            if calMinL(T[i],y[i]) <= 0:
-                if iteration == 0:
-                    print('{}    {} {}'.format(iteration,w,b))
-                else:
-                    print('{} X{} {} {}'.format(iteration,i+1,w,b))
-                iteration += 1
-                update(T[i],y[i])
-                break
-            elif i == sampleNumber - 1:
-                print('{} X{} {} {}'.format(iteration,i+1,w,b))
-                iteration += 1
-                findMinL = True
-                
-    print('{}    {} {}'.format(iteration,w,b))
-    
-if __name__ == '__main__':
-    T,y = dataSet()
-    perceptron(T,y)
+        return accuracy_score(y_test, y_predict)
+
