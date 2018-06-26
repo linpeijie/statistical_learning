@@ -12,8 +12,8 @@ from metric import accuracy_score
 class Perceptron:
     def __init__(self):
         """初始化"""
-        self._w = [0, 0]
-        self._b = 0
+        self.w_ = [0, 0]
+        self.b_ = 0
         self._n = 1
 
     def fit(self, X_train, y_train):
@@ -26,9 +26,9 @@ class Perceptron:
 
         while(not find_min):
             for i in range(sample_num):
-                if y_train[i] * (np.dot(self._w, X_train[i])) <= 0:
-                    self._w = self._w + self._n * y_train[i] * X_train[i]
-                    self._b = self._b + self._n * y_train[i]
+                if y_train[i] * (np.dot(self.w_, X_train[i])) <= 0:
+                    self.w_ = self.w_ + self._n * y_train[i] * X_train[i]
+                    self.b_ = self.b_ + self._n * y_train[i]
                     find_min = False
                     break
                 elif i == sample_num - 1:
@@ -42,7 +42,7 @@ class Perceptron:
     
     def _predict(self, x):
         """预测样本类别"""
-        if np.dot(self._w, x) + self._b >= 0:
+        if np.dot(self.w_, x) + self.b_ >= 0:
             return 1
         else:
             return -1
