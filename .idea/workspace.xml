@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26a37b01-3e45-472b-a879-47428fed4c86" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/HMM/HMM_10.1.py" beforeDir="false" afterPath="$PROJECT_DIR$/HMM/HMM_10.1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HMM/HMM_10.2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,6 +17,7 @@
     <SUITE FILE_PATH="coverage/statistical_learning$decision_tree.coverage" NAME="decision_tree Coverage Results" MODIFIED="1527669950619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/decision_tree" />
     <SUITE FILE_PATH="coverage/statistical_learning$test__3_.coverage" NAME="test (3) Coverage Results" MODIFIED="1528377446636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/regression" />
     <SUITE FILE_PATH="coverage/statistical_learning$test.coverage" NAME="test Coverage Results" MODIFIED="1528247851880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/KNN" />
+    <SUITE FILE_PATH="coverage/statistical_learning$HMM_10_2.coverage" NAME="HMM_10.2 Coverage Results" MODIFIED="1533646198170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HMM" />
     <SUITE FILE_PATH="coverage/statistical_learning$kNN.coverage" NAME="kNN Coverage Results" MODIFIED="1527147695003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/KNN" />
     <SUITE FILE_PATH="coverage/statistical_learning$test__4_.coverage" NAME="test (4) Coverage Results" MODIFIED="1529989502993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PLA" />
     <SUITE FILE_PATH="coverage/statistical_learning$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1527938818257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/decision_tree" />
@@ -24,11 +26,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HMM_10.1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HMM_10.1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HMM/HMM_10.1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="312">
+              <caret line="36" lean-forward="true" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HMM_10.2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HMM/HMM_10.2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <folding>
+                <element signature="e#26#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,6 +81,7 @@
         <option value="$PROJECT_DIR$/PLA/test.py" />
         <option value="$PROJECT_DIR$/HMM/HMM.py" />
         <option value="$PROJECT_DIR$/HMM/HMM_10.1.py" />
+        <option value="$PROJECT_DIR$/HMM/HMM_10.2.py" />
       </list>
     </option>
   </component>
@@ -138,7 +153,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.HMM_10.1">
+  <component name="RunManager" selected="Python.HMM_10.2">
     <configuration name="HMM_10.1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="statistical_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,6 +173,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="HMM_10.2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="statistical_learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HMM" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HMM/HMM_10.2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="kNN" type="PythonConfigurationType" factoryName="Python">
       <module name="statistical_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,25 +206,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/KNN/kNN.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="statistical_learning" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/decision_tree" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/decision_tree/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -276,18 +291,18 @@
       <item itemvalue="Python.kNN" />
       <item itemvalue="Python.test (2)" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.test (3)" />
       <item itemvalue="Python.test (4)" />
       <item itemvalue="Python.HMM_10.1" />
+      <item itemvalue="Python.HMM_10.2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.HMM_10.2" />
         <item itemvalue="Python.HMM_10.1" />
         <item itemvalue="Python.test (4)" />
         <item itemvalue="Python.test (3)" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -311,11 +326,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5013889" side_tool="true" weight="0.23" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49861112" visible="true" weight="0.39894736" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49861112" visible="true" weight="0.39894736" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1297619" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1297619" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.39583334" />
@@ -685,8 +700,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HMM/HMM_10.1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="312">
+          <caret line="36" lean-forward="true" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HMM/HMM_10.2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#26#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
